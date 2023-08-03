@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="JavaScript" src="js/vue.js"></script>
+    <script language="JavaScript">
+        window.onload = function () {
+            let vue = new Vue({
+                el:"#div1",
+
+                data:{
+                    message:"Hello World!",
+                    name:"MYXH"
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+<div id="div1">
+    <span>{{message}}</span>
+    <br>
+
+    <label>
+        <!-- v-bind:value 表示绑定 value 属性, v-bind 可以省略, 也就是 :value -->
+        <!-- <input type="text" v-bind:value="name"> -->
+        <input type="text" :value="name">
+    </label>
+</div>
+</body>
+</html>

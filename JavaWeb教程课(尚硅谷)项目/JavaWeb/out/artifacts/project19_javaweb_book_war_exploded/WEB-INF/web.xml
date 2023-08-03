@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <!-- 在上下文参数中配置视图前缀和视图后缀 -->
+    <context-param>
+        <param-name>view-prefix</param-name>
+        <param-value>/WEB-INF/pages/</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>view-suffix</param-name>
+        <param-value>.html</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>applicationContext.xml</param-value>
+    </context-param>
+
+    <!-- 配置 SessionFilter -->
+    <filter>
+        <filter-name>SessionFilter</filter-name>
+        <filter-class>com.myxh.ssm.filters.SessionFilter</filter-class>
+
+        <init-param>
+            <param-name>whiteList</param-name>
+            <param-value>
+                /project19_javaweb_book/page.do?operate=page&amp;page=user/login,
+                /project19_javaweb_book/user.do?null
+            </param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>SessionFilter</filter-name>
+        <url-pattern>*.do</url-pattern>
+        <url-pattern>*.html</url-pattern>
+    </filter-mapping>
+
+</web-app>

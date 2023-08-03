@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="project8-javaweb-fruit-mvc-reflect:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/project8_javaweb_fruit_mvc_reflect_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="project8-javaweb-fruit-mvc-reflect" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="lib_jdbc" />
+          <element id="library" level="project" name="lib_thymeleaf" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="project8-javaweb-fruit-mvc-reflect/web/Web" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="project10-javaweb-fruit-mvc-controller:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/project10_javaweb_fruit_mvc_controller_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="project10-javaweb-fruit-mvc-controller" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="lib_jdbc" />
+          <element id="library" level="project" name="lib_thymeleaf" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="project10-javaweb-fruit-mvc-controller/web/Web" />
+    </root>
+  </artifact>
+</component>

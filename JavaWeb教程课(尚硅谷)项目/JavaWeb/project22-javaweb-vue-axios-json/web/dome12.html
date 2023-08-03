@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4. JavaScript 中的字符串和 JavaScript 中的 Object 之间互转的 API</title>
+    <script language="JavaScript">
+        function hello() {
+            /*
+            // 1. JavaScript String -> JavaScript Object
+            let str = "{\"name\":\"MYXH\",\"age\":21}";
+
+            alert(typeof str);
+
+            let user = JSON.parse(str);
+
+            alert(typeof user);
+            alert(user.name + "_" + user.age);
+             */
+
+            // 2. JavaScript Object -> JavaScript String
+            let user = {"name":"MYXH","age":21};
+
+            alert(typeof user);
+
+            let userStr = JSON.stringify(user);
+
+            alert(typeof userStr);
+            alert(userStr);
+        }
+    </script>
+</head>
+
+<body>
+<h1>
+    4. JavaScript 中的字符串和 JavaScript 中的 Object 之间互转的 API
+</h1>
+
+<div id="div1">
+    <label>
+        <input type="button" value="转换" onclick="hello()">
+    </label>
+</div>
+</body>
+</html>

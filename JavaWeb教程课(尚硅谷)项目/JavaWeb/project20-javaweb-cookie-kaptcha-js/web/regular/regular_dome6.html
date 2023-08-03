@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="JavaScript">
+        // g 表示匹配的模式为全文匹配, i 表示忽略大小写匹配, m 表示多行匹配
+        // \s 表示匹配任意的空白符, 包括空格、制表符、换页符等, 等价于[\f\n\r\t\v]
+        let regular = /\s/gim;
+
+        let str = "a>b_c|d\ne?f0g";
+
+        let flag = regular.test(str);
+
+        console.log(flag);
+
+        str = str.replace(regular, "A");
+
+        console.log(str);
+    </script>
+</head>
+
+<body>
+<h1>正则表达式的使用三个步骤：</h1>
+
+<h2>1. 定义正则表达式对象</h2>
+
+<h3>1.1 正则表达式定义有两个方式</h3>
+
+<h4>1.1.1 对象形式</h4>
+
+<code>let regular = new RegExp("abc");</code>
+
+<h4>1.1.2 直接量形式</h4>
+
+<code>let regular = /abc/;</code>
+
+<h3>1.2 匹配模式</h3>
+
+<p>g：全局匹配。</p>
+
+<p>i：忽略大小写匹配。</p>
+
+<p>m：多行匹配。</p>
+
+<p>gim 这三个可以组合使用，不区分先后顺序。</p>
+
+<p> 例如：<code>let regular = /abc/gim;</code>
+    <code>let regular = new RegExp("abc","gim");</code>
+</p>
+
+<h2>2. 定义待校验的字符串</h2>
+
+<h2>3. 校验</h2>
+</body>
+</html>

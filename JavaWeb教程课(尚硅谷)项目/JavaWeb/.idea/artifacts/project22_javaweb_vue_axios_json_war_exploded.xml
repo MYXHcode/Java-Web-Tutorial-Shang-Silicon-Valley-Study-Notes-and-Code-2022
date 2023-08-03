@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="project22-javaweb-vue-axios-json:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/project22_javaweb_vue_axios_json_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="project22-javaweb-vue-axios-json" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="lib_jdbc" />
+          <element id="library" level="project" name="lib_gson" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="project22-javaweb-vue-axios-json/web/Web" />
+    </root>
+  </artifact>
+</component>

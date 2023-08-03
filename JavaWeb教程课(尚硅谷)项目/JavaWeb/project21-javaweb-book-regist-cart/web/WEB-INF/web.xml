@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <!-- 在上下文参数中配置视图前缀和视图后缀 -->
+    <context-param>
+        <param-name>view-prefix</param-name>
+        <param-value>/WEB-INF/pages/</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>view-suffix</param-name>
+        <param-value>.html</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>applicationContext.xml</param-value>
+    </context-param>
+
+    <!-- 配置验证码 -->
+    <servlet>
+        <servlet-name>KaptchaServlet</servlet-name>
+        <servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class>
+
+        <init-param>
+            <param-name>kaptcha.border.color</param-name>
+            <param-value>red</param-value>
+        </init-param>
+        <init-param>
+            <param-name>kaptcha.textproducer.char.string</param-name>
+            <param-value>adbcefg</param-value>
+        </init-param>
+        <init-param>
+            <param-name>kaptcha.noise.impl</param-name>
+            <param-value>com.google.code.kaptcha.impl.NoNoise</param-value>
+        </init-param>
+        <init-param>
+            <param-name>kaptcha.image.width</param-name>
+            <param-value>120</param-value>
+        </init-param>
+        <init-param>
+            <param-name>kaptcha.image.height</param-name>
+            <param-value>40</param-value>
+        </init-param>
+        <init-param>
+            <param-name>kaptcha.textproducer.font.size</param-name>
+            <param-value>28</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>KaptchaServlet</servlet-name>
+        <url-pattern>/kaptcha.jpg</url-pattern>
+    </servlet-mapping>
+
+    <!-- 配置 SessionFilter -->
+    <filter>
+        <filter-name>SessionFilter</filter-name>
+        <filter-class>com.myxh.ssm.filters.SessionFilter</filter-class>
+
+        <init-param>
+            <param-name>whiteList</param-name>
+            <param-value>
+                /project21_javaweb_book_regist_cart/page.do?operate=page&amp;page=user/login,
+                /project21_javaweb_book_regist_cart/user.do?null,
+                /project21_javaweb_book_regist_cart/page.do?operate=page&amp;page=user/regist
+            </param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>SessionFilter</filter-name>
+        <url-pattern>*.do</url-pattern>
+        <url-pattern>*.html</url-pattern>
+    </filter-mapping>
+</web-app>

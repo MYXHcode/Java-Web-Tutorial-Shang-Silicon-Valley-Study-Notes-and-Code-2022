@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+1. 概念
+HTML: 超文本标记语言
+XML: 可扩展的标记语言
+HTML 是 XML 的一个子集
+
+2. XML包含三个部分
+2.1 XML 声明, 声明这一行代码必须在 XML 文件的第一行
+2.2 DTD 文档类型定义
+2.3 XML 正文
+ -->
+
+<beans>
+    <!-- 这个 bean 标签的作用是将来 servletpath 中涉及的名字对应的是 fruit, 那么就要 FruitController 这个类来处理 -->
+    <bean id="fruit" class="com.myxh.fruit.controllers.FruitController"/>
+</beans>

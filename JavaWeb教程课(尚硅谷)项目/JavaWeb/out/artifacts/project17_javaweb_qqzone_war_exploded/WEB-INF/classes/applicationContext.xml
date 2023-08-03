@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+1. 概念
+HTML: 超文本标记语言
+XML: 可扩展的标记语言
+HTML 是 XML 的一个子集
+
+2. XML包含三个部分
+2.1 XML 声明, 声明这一行代码必须在 XML 文件的第一行
+2.2 DTD 文档类型定义
+2.3 XML 正文
+ -->
+
+<!DOCTYPE beans [
+        <!ELEMENT beans (bean*)>
+        <!ELEMENT bean (property*)>
+        <!ELEMENT property (#PCDATA)>
+
+        <!ATTLIST bean id ID #REQUIRED>
+        <!ATTLIST bean class CDATA #IMPLIED>
+        <!ATTLIST property name CDATA #IMPLIED>
+        <!ATTLIST property ref IDREF #IMPLIED>
+        ]>
+
+<beans>
+    <bean id="userBasicDao" class="com.myxh.qqzone.dao.impl.UserBasicDaoImpl"/>
+    <bean id="topicDao" class="com.myxh.qqzone.dao.impl.TopicDaoImpl"/>
+    <bean id="replyDao" class="com.myxh.qqzone.dao.impl.ReplyDaoImpl"/>
+    <bean id="hostReplyDao" class="com.myxh.qqzone.dao.impl.HostReplyDaoImpl"/>
+
+    <bean id="userBasicService" class="com.myxh.qqzone.service.impl.UserBasicServiceImpl">
+        <!-- property 标签用来表示属性, name 表示属性名, ref 表示引用其他 bean 的 id 值 -->
+        <property name="userBasicDao" ref="userBasicDao"/>
+    </bean>
+
+    <bean id="topicService" class="com.myxh.qqzone.service.impl.TopicServiceImpl">
+        <property name="topicDao" ref="topicDao"/>
+        <property name="replyService" ref="replyService"/>
+        <property name="userBasicService" ref="userBasicService"/>
+    </bean>
+
+    <bean id="replyService" class="com.myxh.qqzone.service.impl.ReplyServiceImpl">
+        <property name="replyDao" ref="replyDao"/>
+        <property name="hostReplyService" ref="hostReplyService"/>
+        <property name="userBasicService" ref="userBasicService"/>
+    </bean>
+    
+    <bean id="hostReplyService" class="com.myxh.qqzone.service.impl.HostReplyServiceImpl">
+        <property name="hostReplyDao" ref="hostReplyDao"/>
+    </bean>
+
+    <bean id="user" class="com.myxh.qqzone.controller.UserController">
+        <property name="userBasicService" ref="userBasicService"/>
+        <property name="topicService" ref="topicService"/>
+    </bean>
+
+    <bean id="topic" class="com.myxh.qqzone.controller.TopicController">
+        <property name="topicService" ref="topicService"/>
+    </bean>
+    <bean id="reply" class="com.myxh.qqzone.controller.ReplyController">
+        <property name="replyService" ref="replyService"/>
+    </bean>
+
+    <bean id="page" class="com.myxh.ssm.springmvc.PageController"/>
+</beans>
+
+<!--
+Node 节点
+    Element 元素节点
+    Text 文本节点
+
+<name>MYXH</name>
+ -->

@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="project18-javaweb-book:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/project18_javaweb_book_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="project18-javaweb-book" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="lib_jdbc" />
+          <element id="library" level="project" name="lib_thymeleaf" />
+          <element id="library" level="project" name="lib_ssm-1.0" />
+          <element id="library" level="project" name="lib_utils" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="project18-javaweb-book/web/Web" />
+    </root>
+  </artifact>
+</component>

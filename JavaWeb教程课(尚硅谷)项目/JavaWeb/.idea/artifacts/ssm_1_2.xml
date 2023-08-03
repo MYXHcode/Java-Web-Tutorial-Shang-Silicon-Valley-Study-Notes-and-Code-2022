@@ -1,0 +1,39 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ssm-1.2">
+    <output-path>$PROJECT_DIR$/out/artifacts/ssm_1_2</output-path>
+    <root id="archive" name="ssm-1.2.jar">
+      <element id="directory" name="com">
+        <element id="directory" name="myxh">
+          <element id="directory" name="ssm">
+            <element id="directory" name="basedao">
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/project21-javaweb-book-regist-cart/com/myxh/ssm/basedao/BaseDao.class" />
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/project21-javaweb-book-regist-cart/com/myxh/ssm/basedao/BaseDaoException.class" />
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/project21-javaweb-book-regist-cart/com/myxh/ssm/basedao/ConnectionUtil.class" />
+            </element>
+            <element id="directory" name="filters">
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/project21-javaweb-book-regist-cart/com/myxh/ssm/filters/CharacterEncodingFilter.class" />
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/project21-javaweb-book-regist-cart/com/myxh/ssm/filters/OpenSessionInViewFilter.class" />
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/project21-javaweb-book-regist-cart/com/myxh/ssm/filters/SessionFilter.class" />
+            </element>
+            <element id="directory" name="ioc">
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/project21-javaweb-book-regist-cart/com/myxh/ssm/ioc/BeanFactory.class" />
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/project21-javaweb-book-regist-cart/com/myxh/ssm/ioc/ClassPathXmlApplicationContext.class" />
+            </element>
+            <element id="directory" name="listeners">
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/project21-javaweb-book-regist-cart/com/myxh/ssm/listeners/ContextLoaderListener.class" />
+            </element>
+            <element id="directory" name="springmvc">
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/project21-javaweb-book-regist-cart/com/myxh/ssm/springmvc/DispatcherServlet.class" />
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/project21-javaweb-book-regist-cart/com/myxh/ssm/springmvc/DispatcherServletException.class" />
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/project21-javaweb-book-regist-cart/com/myxh/ssm/springmvc/PageController.class" />
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/project21-javaweb-book-regist-cart/com/myxh/ssm/springmvc/ViewBaseServlet.class" />
+            </element>
+            <element id="directory" name="transaction">
+              <element id="file-copy" path="$PROJECT_DIR$/out/production/project21-javaweb-book-regist-cart/com/myxh/ssm/transaction/TransactionManager.class" />
+            </element>
+          </element>
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

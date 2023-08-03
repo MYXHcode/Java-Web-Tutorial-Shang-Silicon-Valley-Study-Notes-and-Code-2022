@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+1. 概念
+HTML: 超文本标记语言
+XML: 可扩展的标记语言
+HTML 是 XML 的一个子集
+
+2. XML包含三个部分
+2.1 XML 声明, 声明这一行代码必须在 XML 文件的第一行
+2.2 DTD 文档类型定义
+2.3 XML 正文
+ -->
+
+<beans>
+    <bean id="fruitDao" class="com.myxh.fruit.dao.impl.FruitDaoImpl"/>
+
+    <bean id="fruitService" class="com.myxh.fruit.service.impl.FruitServiceImpl">
+        <!-- property 标签用来表示属性, name 表示属性名, ref 表示引用其他 bean 的 id 值 -->
+        <property name="fruitDao" ref="fruitDao"/>
+    </bean>
+
+    <bean id="fruit" class="com.myxh.fruit.controllers.FruitController">
+        <property name="fruitService" ref="fruitService"/>
+    </bean>
+</beans>
+
+<!--
+Node 节点
+    Element 元素节点
+    Text 文本节点
+
+<name>MYXH</name>
+ -->

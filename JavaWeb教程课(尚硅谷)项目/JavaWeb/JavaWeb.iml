@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="GENERAL_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="jdk" jdkName="17" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Tomcat 9.0.76" level="application_server_libraries" />
+    <orderEntry type="library" exported="" name="lib_jdbc" level="project" />
+    <orderEntry type="library" exported="" name="lib_thymeleaf" level="project" />
+    <orderEntry type="library" exported="" name="lib_ssm-1.0" level="project" />
+    <orderEntry type="library" exported="" name="lib_ssm-1.1" level="project" />
+    <orderEntry type="library" exported="" name="lib_ssm-1.2" level="project" />
+    <orderEntry type="library" exported="" name="lib_ssm-1.3" level="project" />
+    <orderEntry type="library" exported="" name="lib_utils" level="project" />
+    <orderEntry type="library" exported="" name="lib_kaptcha" level="project" />
+    <orderEntry type="library" exported="" name="lib_gson" level="project" />
+  </component>
+</module>

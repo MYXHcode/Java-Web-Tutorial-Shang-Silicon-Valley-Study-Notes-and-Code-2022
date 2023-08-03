@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="project20-javaweb-cookie-kaptcha-js:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/project20_javaweb_cookie_kaptcha_js_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="project20-javaweb-cookie-kaptcha-js" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="lib_jdbc" />
+          <element id="library" level="project" name="lib_kaptcha" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="project20-javaweb-cookie-kaptcha-js/web/Web" />
+    </root>
+  </artifact>
+</component>

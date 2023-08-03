@@ -1,0 +1,40 @@
+package com.myxh.fruit.servlets;
+
+import com.myxh.fruit.dao.FruitDao;
+import com.myxh.fruit.dao.impl.FruitDaoImpl;
+import com.myxh.ssm.springmvc.ViewBaseServlet;
+import com.myxh.utils.StringUtils;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+/**
+ * @author MYXH
+ * @date 2023/6/25
+ */
+@WebServlet("/delete.do")
+public class DeleteServlet extends ViewBaseServlet
+{
+    private final FruitDao fruitDao = new FruitDaoImpl();
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
+    {
+        String idStr = request.getParameter("id");
+
+        if (StringUtils.isNotEmpty(idStr))
+        {
+            int id = Integer.parseInt(idStr);
+
+            fruitDao.deleteFruit(id);
+
+            // super.processTemplate("index", request, response);
+            // request.getRequestDispatcher("index.html").forward(request, response);
+            // 此处需要重定向, 目的是重新给 IndexServlet 发请求, 重新获取 fruitList, 然后覆盖到 session 中, 使得 index.html 页面上显示的 session 中的数据是最新的
+            response.sendRedirect("index");
+        }
+    }
+}

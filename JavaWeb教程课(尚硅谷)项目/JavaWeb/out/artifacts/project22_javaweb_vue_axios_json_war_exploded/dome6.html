@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="JavaScript" src="js/vue.js"></script>
+    <script language="JavaScript">
+        window.onload = function () {
+            let vue = new Vue({
+                el: "#div1",
+
+                data:{
+                    message:"Hello World!"
+                },
+
+                methods:{
+                    myReverse:function (){
+                        this.message = this.message.split("").reverse().join("");
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+<div id="div1">
+    <span>{{message}}</span>
+    <br>
+
+    <label>
+        <!-- v-on:click 表示绑定点击事件, v-on: 可以省略, 变成 @click -->
+        <!-- <input type="button" value="反转" v-on:click="myReverse"> -->
+        <input type="button" value="反转" @click="myReverse">
+    </label>
+</div>
+</body>
+</html>

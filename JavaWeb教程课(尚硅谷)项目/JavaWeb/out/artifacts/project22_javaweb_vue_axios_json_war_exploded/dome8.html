@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="JavaScript" src="js/vue.js"></script>
+    <script language="JavaScript">
+        window.onload = function () {
+            let vue = new Vue({
+                el: "#div1",
+
+                data: {
+                    number: 1
+                },
+
+                methods:{
+                    changeNumber:function (){
+                        this.number = this.number + 1;
+                    }
+                },
+
+                // 1. Vue 对象创建之前
+                beforeCreate: function () {
+                    console.log("beforeCreate:Vue 对象创建之前......");
+                    console.log("number:" + this.number);
+                },
+
+                // 2. Vue 对象创建之后
+                created: function () {
+                    console.log("created:Vue 对象创建之后......");
+                    console.log("number:" + this.number);
+                },
+
+                // 3. 数据装载之前
+                beforeMount: function () {
+                    console.log("beforeMount:数据装载之前......");
+                    console.log("span:" + document.getElementById("span").innerText);
+                },
+
+                // 4. 数据装载之后
+                mounted: function () {
+                    console.log("mounted:数据装载之后......");
+                    console.log("span:" + document.getElementById("span").innerText);
+                },
+
+                // 5. 数据更新之前
+                beforeUpdate: function () {
+                    console.log("beforeUpdate:数据更新之前......");
+                    console.log("number:" + this.number);
+                    console.log("span:" + document.getElementById("span").innerText);
+                },
+
+                // 6. 数据更新之后
+                updated: function () {
+                    console.log("updated:数据更新之后......");
+                    console.log("number:" + this.number);
+                    console.log("span:" + document.getElementById("span").innerText);
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+<div id="div1">
+    <span id="span">{{number}}</span>
+    <br>
+
+    <label>
+        <input type="button" value="改变 number 的值" @click="changeNumber">
+    </label>
+</div>
+</body>
+</html>

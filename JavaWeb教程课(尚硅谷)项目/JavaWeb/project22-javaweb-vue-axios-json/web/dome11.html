@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3. 演示 Axios 发送异步请求给服务器端，服务器响应 JSON 格式的数据给客户端</title>
+    <script language="JavaScript" src="js/vue.js"></script>
+    <script language="JavaScript" src="js/axios.js"></script>
+    <script language="JavaScript">
+        window.onload = function () {
+            let vue = new Vue({
+                el: "#div1",
+
+                data: {
+                    name: "MYXH",
+                    password: "520.ILY!"
+                },
+
+                methods: {
+                    axios3: function () {
+                        axios({
+                            method: "POST",
+                            url: "axios3.do",
+                            data: {
+                                name: vue.name,
+                                password: vue.password
+                            }
+                        })
+                            .then(function (value) {
+                                // 成功响应时执行的回调, value.data 可以获取到服务器响应内容
+                                let data = value.data;
+
+                                // data 对应的数据: {name:"末影小黑xh",password:"520.ILY!"}
+
+                                console.log(data);
+
+                                vue.name = data.name;
+                                vue.password = data.password;
+
+                                /*
+                                此处 value 中的 data 返回的是 JavaScript Object, 因此可以直接使用属性,
+                                如果获取的是一个字符串: "(\"name\":\"末影小黑xh\",\"password\":\"ok\"}"
+                                 */
+
+                                // JavaScript 语言中, 也有字符串和 JavaScript 对象之间互转的 API
+                                // Object -> String
+                                // let stringifyStr = JSON.stringify(object);
+
+                                // String -> Object
+                                // let parseObj = JSON.parse(string);
+                            })
+                            .catch(function (reason) {
+                                // 有异常时执行的回调, reason.response.data 可以获取到响应的内容, reason.message 和 reason.stack 可以查看错误的信息
+                                console.log(reason)
+                            });
+                    }
+                },
+            });
+        }
+    </script>
+</head>
+
+<body>
+<h1>
+    3. 演示 Axios 发送异步请求给服务器端，服务器响应 JSON 格式的数据给客户端
+</h1>
+
+<div id="div1">
+    <label>
+        用户名称：<input type="text" v-model:type="name"><br>
+        用户密码：<input type="password" v-model:type="password"><br>
+        <input type="button" value="服务器响应 JSON 格式的数据给客户端" @click="axios3">
+    </label>
+</div>
+</body>
+</html>

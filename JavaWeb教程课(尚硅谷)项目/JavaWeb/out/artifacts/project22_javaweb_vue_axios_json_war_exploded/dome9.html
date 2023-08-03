@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1. 演示 Axios 发送普通的参数值给服务器端</title>
+    <script language="JavaScript" src="js/vue.js"></script>
+    <script language="JavaScript" src="js/axios.js"></script>
+    <script language="JavaScript">
+        window.onload = function () {
+            let vue = new Vue({
+                el: "#div1",
+
+                data: {
+                    name: "MYXH",
+                    password: "520.ILY!"
+                },
+
+                methods: {
+                    axios1: function () {
+                        axios({
+                            method: "POST",
+                            url: "axios1.do",
+                            params: {
+                                name: vue.name,
+                                password: vue.password
+                            }
+                        })
+                            .then(function (value) {
+                                // 成功响应时执行的回调, value.data 可以获取到服务器响应内容
+                                console.log(value);
+                            })
+                            .catch(function (reason) {
+                                // 有异常时执行的回调, reason.response.data 可以获取到响应的内容, reason.message 和 reason.stack 可以查看错误的信息
+                                console.log(reason)
+                            });
+                    }
+                },
+            });
+        }
+    </script>
+</head>
+
+<body>
+<h1>
+    1. 演示 Axios 发送普通的参数值给服务器端
+</h1>
+
+<div id="div1">
+    <label>
+        用户名称：<input type="text" v-model:type="name"><br>
+        用户密码：<input type="password" v-model:type="password"><br>
+        <input type="button" value="发送一个带普通请求参数值的异步请求" @click="axios1">
+    </label>
+</div>
+</body>
+</html>

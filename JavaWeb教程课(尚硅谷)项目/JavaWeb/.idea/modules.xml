@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JavaWeb.iml" filepath="$PROJECT_DIR$/JavaWeb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project1-javaweb-begin/project1-javaweb-begin.iml" filepath="$PROJECT_DIR$/project1-javaweb-begin/project1-javaweb-begin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project10-javaweb-fruit-mvc-controller/project10-javaweb-fruit-mvc-controller.iml" filepath="$PROJECT_DIR$/project10-javaweb-fruit-mvc-controller/project10-javaweb-fruit-mvc-controller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project11-javaweb-fruit-mvc-service-ioc/project11-javaweb-fruit-mvc-service-ioc.iml" filepath="$PROJECT_DIR$/project11-javaweb-fruit-mvc-service-ioc/project11-javaweb-fruit-mvc-service-ioc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project12-javaweb-servlet-api/project12-javaweb-servlet-api.iml" filepath="$PROJECT_DIR$/project12-javaweb-servlet-api/project12-javaweb-servlet-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project13-javaweb-filter-listener/project13-javaweb-filter-listener.iml" filepath="$PROJECT_DIR$/project13-javaweb-filter-listener/project13-javaweb-filter-listener.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project14-javaweb-fruit-mvc-transaction/project14-javaweb-fruit-mvc-transaction.iml" filepath="$PROJECT_DIR$/project14-javaweb-fruit-mvc-transaction/project14-javaweb-fruit-mvc-transaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project15-javaweb-qqzone/project15-javaweb-qqzone.iml" filepath="$PROJECT_DIR$/project15-javaweb-qqzone/project15-javaweb-qqzone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project16-javaweb-qqzone/project16-javaweb-qqzone.iml" filepath="$PROJECT_DIR$/project16-javaweb-qqzone/project16-javaweb-qqzone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project17-javaweb-qqzone/project17-javaweb-qqzone.iml" filepath="$PROJECT_DIR$/project17-javaweb-qqzone/project17-javaweb-qqzone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project18-javaweb-book/project18-javaweb-book.iml" filepath="$PROJECT_DIR$/project18-javaweb-book/project18-javaweb-book.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project19-javaweb-book/project19-javaweb-book.iml" filepath="$PROJECT_DIR$/project19-javaweb-book/project19-javaweb-book.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project2-javaweb-servlet/project2-javaweb-servlet.iml" filepath="$PROJECT_DIR$/project2-javaweb-servlet/project2-javaweb-servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project20-javaweb-cookie-kaptcha-js/project20-javaweb-cookie-kaptcha-js.iml" filepath="$PROJECT_DIR$/project20-javaweb-cookie-kaptcha-js/project20-javaweb-cookie-kaptcha-js.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project21-javaweb-book-regist-cart/project21-javaweb-book-regist-cart.iml" filepath="$PROJECT_DIR$/project21-javaweb-book-regist-cart/project21-javaweb-book-regist-cart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project22-javaweb-vue-axios-json/project22-javaweb-vue-axios-json.iml" filepath="$PROJECT_DIR$/project22-javaweb-vue-axios-json/project22-javaweb-vue-axios-json.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project23-javaweb-book-cart-vue-axios/project23-javaweb-book-cart-vue-axios.iml" filepath="$PROJECT_DIR$/project23-javaweb-book-cart-vue-axios/project23-javaweb-book-cart-vue-axios.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project3-javaweb-fruit-thymeleaf/project3-javaweb-fruit-thymeleaf.iml" filepath="$PROJECT_DIR$/project3-javaweb-fruit-thymeleaf/project3-javaweb-fruit-thymeleaf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project4-javaweb-fruit-thymeleaf/project4-javaweb-fruit-thymeleaf.iml" filepath="$PROJECT_DIR$/project4-javaweb-fruit-thymeleaf/project4-javaweb-fruit-thymeleaf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project5-javaweb-fruit-pagination/project5-javaweb-fruit-pagination.iml" filepath="$PROJECT_DIR$/project5-javaweb-fruit-pagination/project5-javaweb-fruit-pagination.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project6-javaweb-fruit-keyword/project6-javaweb-fruit-keyword.iml" filepath="$PROJECT_DIR$/project6-javaweb-fruit-keyword/project6-javaweb-fruit-keyword.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project7-javaweb-fruit-mvc/project7-javaweb-fruit-mvc.iml" filepath="$PROJECT_DIR$/project7-javaweb-fruit-mvc/project7-javaweb-fruit-mvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project8-javaweb-fruit-mvc-reflect/project8-javaweb-fruit-mvc-reflect.iml" filepath="$PROJECT_DIR$/project8-javaweb-fruit-mvc-reflect/project8-javaweb-fruit-mvc-reflect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project9-javaweb-fruit-mvc-dispatcherServlet/project9-javaweb-fruit-mvc-dispatcherServlet.iml" filepath="$PROJECT_DIR$/project9-javaweb-fruit-mvc-dispatcherServlet/project9-javaweb-fruit-mvc-dispatcherServlet.iml" />
+    </modules>
+  </component>
+</project>

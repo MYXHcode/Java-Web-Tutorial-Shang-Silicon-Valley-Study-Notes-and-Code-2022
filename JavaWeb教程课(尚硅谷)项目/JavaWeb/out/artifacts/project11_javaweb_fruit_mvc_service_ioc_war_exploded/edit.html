@@ -1,0 +1,61 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/edit.css">
+    <title></title>
+</head>
+
+<body>
+<div id="div_container">
+    <div id="div_fruit_list">
+        <p class="center f30">编辑库存信息</p>
+        <form th:action="@{/fruit.do}" th:object="${fruit}" method="post">
+            <!-- 隐藏域: 功能类似于文本框, 它的值会随着表单的发送而发送给服务器, 但是界面上用户看不到 -->
+            <input type="hidden" name="operate" value="update">
+            <input type="hidden" name="id" th:value="*{id}">
+            <table id="tbl_fruit">
+                <tr>
+                    <th class="w20">名称：</th>
+                    <td>
+                        <label>
+                            <!-- <input type="text" name="name" th:value="${fruit.name}"> -->
+                            <input type="text" name="name" th:value="*{name}">
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th class="w20">单价：</th>
+                    <td>
+                        <label>
+                            <input type="text" name="price" th:value="*{price}">
+                        </label></td>
+                </tr>
+
+                <tr>
+                    <th class="w20">库存：</th>
+                    <td>
+                        <label>
+                            <input type="text" name="count" th:value="*{count}">
+                        </label></td>
+                </tr>
+
+                <tr>
+                    <th class="w20">备注：</th>
+                    <td>
+                        <label>
+                            <input type="text" name="remark" th:value="*{remark}">
+                        </label></td>
+                </tr>
+
+                <tr>
+                    <th colspan="2">
+                        <input type="submit" value="修改">
+                    </th>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+</body>
+</html>

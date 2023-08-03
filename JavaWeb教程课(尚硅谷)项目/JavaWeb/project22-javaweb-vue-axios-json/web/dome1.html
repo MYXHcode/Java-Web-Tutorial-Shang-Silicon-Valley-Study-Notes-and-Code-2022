@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="JavaScript" src="js/vue.js"></script>
+    <script language="JavaScript">
+        // 定义 JavaScript 对象方式一
+        /*
+        let person = new Object();
+
+        person.id = "001";
+        person.name = "MYXH";
+
+        person.sayHello = function () {
+            alert("Hello world!");
+        }
+         */
+
+        // 定义 JavaScript 对象方式二
+        let person = {
+            "id":"001",
+            "name":"MYXH",
+
+            "sayHello":function (){
+                alert("Hello world!");
+            }
+        }
+
+        function hello() {
+            person.sayHello();
+        }
+
+        window.onload = function () {
+            let vue = new Vue();
+        }
+    </script>
+</head>
+
+<body>
+<div id="div1">
+    <span>Hello World!</span>
+    <input type="button" value="打招呼" onclick="hello()">
+</div>
+</body>
+</html>

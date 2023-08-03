@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="JavaScript" src="js/vue.js"></script>
+    <script language="JavaScript">
+        window.onload = function () {
+            let vue = new Vue({
+                el: "#div1",
+
+                data: {
+                    message: "Hello World!"
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+<div id="div1">
+    <span>{{message}}</span>
+    <br>
+
+    <label>
+        <!--
+        v-model 指的是双向绑定,
+        也就是之前的 v-bind 是通过 message 这个变量的值来控制 input 输入,
+        现在 v-model 不仅可以通过 message 来控制 input 输入, 反过来, input 输入的内容也会改变 message的值,
+        :value 可以省略, 也就是 :v-model
+         -->
+        <!-- <input type="text" v-model:value="message"> -->
+
+        <!-- v-model:value 中 :value可以省略, 直接写成 v-model -->
+        <!-- trim 可以去除首尾空格 -->
+        <input type="text" v-model.trim="message">
+    </label>
+</div>
+</body>
+</html>
